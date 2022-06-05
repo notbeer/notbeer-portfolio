@@ -1,0 +1,78 @@
+@import '../../../scss/global/breakpoints.scss';
+
+section#HeroSection {
+    opacity: 0;
+    &.active {
+        background: url("../../../../public/images/hero-background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        opacity: 1;
+        overflow: hidden;
+        transition: opacity 1.5s;
+    }
+    div.content {
+        height: 100vh;
+        margin: 0 5rem 0 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include xl {
+            margin: 5vh 3rem 2rem 3rem;
+            height: 77vh;
+        }
+        @include md {
+            text-align: center;
+            display: inline-block;
+        }
+        div.information {
+            width: 45%;
+            @include xl {
+                width: 480px;
+            }
+            @include md {
+                width: auto;
+                margin-top: 100px;
+                margin-bottom: 2rem;
+            }
+            h1 {
+                font-size: 4.5rem;
+                line-height: 1.2em;
+                @include xl {
+                    font-size: 2.7rem;
+                }
+            }
+            p {
+                font-size: 1rem;
+                margin-top: 20px;
+                @include xl {
+                    font-size: 0.9rem;
+                    margin-top: 15px;
+                }
+            }
+            button {
+                margin-top: 70px;
+                @include lg {
+                    margin-top: 40px;
+                }
+            }
+        }
+        div.hero-images {
+            width: 630px;
+            @include xl {
+                width: 550px;
+            }
+            @include md {
+                width: 430px;
+                display: inline;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .circle {
+                position: absolute;
+            }
+        }
+    }
+}

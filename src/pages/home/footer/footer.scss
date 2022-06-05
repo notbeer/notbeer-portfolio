@@ -1,0 +1,177 @@
+@import '../../../scss/global/breakpoints.scss';
+
+section#FooterSection {
+    font-size: 0.9rem;
+    padding: 5rem 3rem 6rem 3rem;
+    user-select: none;
+    @include lg {
+        padding: 5rem 1rem 3rem 1rem;
+    }
+    @include md {
+        text-align: center;
+    }
+    footer.footer-content {
+        display: flex;
+        justify-content: space-between;
+        @include md {
+            display: inline;
+        }
+        div.svg-1 {
+            position: relative;
+            right: 30px;
+            bottom: 100px;
+            width: 202px;
+            height: 85px;
+            overflow: hidden;
+            transform: rotate(150deg);
+            z-index: unset;
+            @include md {
+                position: absolute;
+                bottom: 0;
+                left: -30px;
+            }
+        }
+        div.footer-information {
+            font-family: 'Archivo Black', sans-serif;
+            a.logo {
+                color: var(--font-pale);
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                display: inline-block;
+                cursor: pointer;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    padding-top: 5px;
+                    border-bottom: 2px solid var(--accent);
+                }
+            }
+            div.description {
+                font-size: 1.55rem;
+                letter-spacing: 0.1rem;
+                line-height: 1.5em;
+                text-transform: uppercase;
+            }
+            @include md {
+                display: none;
+            }
+        }
+        ul.footer-items {
+            color: var(--font-pale);
+            font-size: 15px;
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            li:not(.footer-socials) {
+                letter-spacing: 0.15rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: color 0.4s;
+                &:hover {
+                    color: var(--font);
+                }
+            }
+            li.footer-socials {
+                gap: 1rem;
+                margin: 1rem 0 1.5rem 0;
+                display: flex;
+                justify-content: center;
+                @include md {
+                    margin-top: 1rem;
+                }
+                a {
+                    background-color: var(--background-light);
+                    color: var(--font);
+                    border: 1px solid transparent;
+                    border-radius: 0.5rem;
+                    padding: 0.5rem;
+                    display: flex;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+                    i {
+                        font-size: 17px;
+                    }
+                    &:hover {
+                        background-color: transparent;
+                        color: var(--accent);
+                        border-color: var(--accent);
+                    }
+                }
+            }
+        }
+        div.footer-contact {
+            @include md {
+                margin-top: 20px;
+            }
+            div.title {
+                letter-spacing: 0.05rem;
+                font-weight: 600;
+                line-height: 1.5em;
+                text-transform: uppercase;
+            }
+            form {
+                margin-top: 20px;
+                display: inline-block;
+                div.input-box {
+                    margin-bottom: 24px;
+                    label,
+                    input,
+                    textarea {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 100%;
+                        width: 100%;
+                        @include md {
+                            width: 75%;
+                        }
+                    }
+                    label {
+                        i {
+                            color: var(--font-pale);
+                            font-size: 1.2rem;
+                            position: absolute;
+                            margin-top: 0.35rem;
+                            cursor: pointer;
+                        }
+                    }
+                    input, textarea {
+                        color: var(--font);
+                        background-color: transparent;
+                        border-bottom: 1px solid var(--border-color);
+                        padding: 3.5px 0 10px 30px;
+                        transition: all 200ms ease;
+                        &:not(:placeholder-shown):not(:-webkit-autofill:focus) {
+                            &:invalid {
+                                border-bottom: 1px solid var(--red);
+                            }
+                        }
+                        &:focus {
+                            &:valid {
+                                border-bottom: 1px solid var(--green);
+                            }
+                        }
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus,
+                        &:-webkit-autofill:active {
+                            transition: background-color 999999999s ease-in-out 0s, color 999999999s ease-in-out 0s;
+                        }
+                    }
+                    textarea {
+                        height: 40px;
+                        resize: none;
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.footer-copyright {
+        color: var(--font-pale);
+        @include md {
+            margin-top: 50px;
+        }
+    }
+}

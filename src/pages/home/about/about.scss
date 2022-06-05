@@ -1,0 +1,97 @@
+@import '../../../scss/global/breakpoints.scss';
+
+section#AboutSection {
+    background-color: var(--background-light);
+    padding: 4rem 0 5rem 0;
+    div.content {
+        margin-right: 4rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 45% 50%;
+        gap: 4%;
+        @include xl {
+            margin: 0 1.5rem 0 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+        div.skills-sphere {
+            width: 100%;
+            @include md {
+                width: auto;
+            }
+        }
+        div.information {
+            overflow-x: hidden;
+            div.cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                @include sm {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                }
+                div.card {
+                    color: #fff;
+                    background: var(--accent);
+                    border: 1px solid transparent;
+                    border-radius: 1rem;
+                    padding: 2rem;
+                    text-align: center;
+                    i {
+                        font-size: 1.5rem;
+                        margin-bottom: 0.8rem;
+                    }
+                    h5 {
+                        font-size: 0.95rem;
+                    }
+                    small {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            div.my-interests {
+                h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                    @include md {
+                        font-size: 1rem;
+                        text-align: center;
+                    }
+                }
+                div.interests {
+                    margin-top: 10px;
+                    display: flex;
+                    gap: 4rem;
+                    @include md {
+                        justify-content: space-between;
+                        gap: inherit;
+                    }
+                    div.interest {
+                        display: flex;
+                        i {
+                            color: var(--accent);
+                            font-size: 1.3rem;
+                            margin: 2px 5px 0 0;
+                            @include md {
+                                font-size: 1.1rem;
+                            }
+                        }
+                        h4 {
+                            @include md {
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        p.interest-information {
+            color: var(--font-pale);
+            margin: 2rem 0 1.8rem;
+            @include md {
+                text-align: center;
+                margin: 1.8rem 0;
+            }
+        }
+    }
+}

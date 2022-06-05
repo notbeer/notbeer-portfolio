@@ -1,0 +1,94 @@
+@import '../../../scss/global/breakpoints.scss';
+
+section#PortfolioSection {
+    padding: 4rem 0 5rem 0;
+    div.portfolio-categories {
+        margin: 2rem 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        button.category {
+            font-weight: 800;
+            color: black;
+            background-color: var(--background-light);
+            border-radius: 0.5rem;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover, &.active {
+                background-color: var(--accent);
+                color: #fff;
+            }
+        }
+    }
+    div.cards {
+        margin: 2rem 3rem 0 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        @include lg {
+            margin: 1rem 1.5rem 0 1.5rem;
+            grid-template-columns: 1fr;
+        }
+        div.card {
+            border-radius: 1rem;
+            position: relative;
+            height: calc(20vh + 10vw);
+            grid-column: span 1;
+            overflow: hidden;
+            &.column-2 {
+                grid-column: span 2;
+            }
+            @include lg {
+                height: calc(24vh + 10vw);
+                grid-column: span 2;
+            }
+            &:hover > div.image img {
+                transform: scale(1.1);
+            }
+            div.image {
+                img {
+                    border-radius: 0.5rem;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.4s ease-in-out;
+                }
+                div.overlay-color {
+                    background: linear-gradient(to bottom, transparent, #141414);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.4s ease-in-out;
+                }
+            }
+            div.information {
+                position: relative;
+                padding: 0 0.7rem 0.35rem 0.7rem;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                user-select: none;
+                h4 {
+                    color: #fff;
+                }
+                p {
+                    color: var(--dark-font-pale);
+                    font-size: 13px;
+                    margin-bottom: 15px;
+                }
+                span.buttons {
+                    button {
+                        margin-right: 0.5rem;
+                    }
+                }
+                @include lg {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

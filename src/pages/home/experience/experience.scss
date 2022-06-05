@@ -1,0 +1,52 @@
+@import '../../../scss/global/breakpoints.scss';
+
+section#ExperienceSection {
+    overflow: hidden;
+    padding: 4rem 0 5rem 0;
+    div.cards {
+        margin: 2rem 3rem 0 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        @include xl {
+            margin: 1rem 1.5rem 0 1.5rem;
+        }
+        @include lg {
+            grid-template-columns: 1fr;
+        }
+        div.card {
+            border: 1px solid transparent;
+            border-radius: 2rem;
+            padding: 2.4rem 5rem;
+            @include lg {
+                padding: 2rem;
+            }
+            h3 {
+                color: #fff;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            div.content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 1.2rem;
+                @include sm {
+                    grid-template-columns: 1fr 0fr;
+                }
+                div.detail {
+                    display: flex;
+                    gap: 1rem;
+                    i {
+                        margin-top: 4px;
+                    }
+                    h4 {
+                        color: #fff;
+                    }
+                    small {
+                        color: var(--dark-font-pale);
+                    }
+                }
+            }
+        }
+    }
+}

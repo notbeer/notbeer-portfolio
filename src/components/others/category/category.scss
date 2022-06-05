@@ -1,0 +1,35 @@
+@import '../../../scss/global/breakpoints.scss';
+
+div.category {
+    user-select: none;
+    h1 {
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--font);
+        &:after {
+            content: "";
+            border-bottom: 2px solid var(--accent);
+            margin: 0 auto;
+            width: 70px;
+            display: block;
+        }
+        @include sm {
+            font-size: 38px;
+        }
+    }
+    &.center {
+        h1 {
+            &:after {
+                margin: 0 auto;
+            }
+        }
+    }
+    p {
+        text-align: center;
+        color: var(--font-pale);
+        margin-top: 20px;
+    }
+}

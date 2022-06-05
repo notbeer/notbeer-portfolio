@@ -1,0 +1,29 @@
+div.hoc {
+    width: 171px;
+    height: 170px;
+    transform: rotateZ(-180deg);
+    &.rotateRight {
+        animation: rotateRight 1s normal forwards ease-in-out;
+    }
+    &.rotateLeft {
+        animation: rotateLeft 1s normal forwards ease-in-out;
+    }
+}
+
+@keyframes rotateRight {
+    from {
+        transform: rotateZ(-180deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rotateLeft {
+    from {
+        transform: rotateZ(180deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
+} 
