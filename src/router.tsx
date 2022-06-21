@@ -20,23 +20,23 @@ import Error from "./pages/error/error";
 export default function Router() {
     return (
         <BrowserRouter>
-            <Routes>
-                <Route path='/' element={
-                    <>
-                        <ToastContainer
-                            position="top-right"
-                            autoClose={ 5000 }
-                            hideProgressBar={ false }
-                            newestOnTop={ false }
-                            closeOnClick
-                            rtl={ false }
-                            pauseOnFocusLoss
-                            draggable
-                            pauseOnHover
-                        />
-                        <Theme/>
-                        <Navbar/>
-                        <main>
+            <ToastContainer
+                position="top-right"
+                autoClose={ 5000 }
+                hideProgressBar={ false }
+                newestOnTop={ false }
+                closeOnClick
+                rtl={ false }
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
+            <Theme/>
+            <Navbar/>
+            <main id="App">
+                <Routes>
+                    <Route path='/' element={
+                        <>
                             <Home/>
                             <About/>
                             <Experience/>
@@ -44,13 +44,13 @@ export default function Router() {
                             <Portfolio/>
                             <Testimonial/>
                             <Footer/>
-                        </main>
-                    </>
-                }/>
-                <Route path='*' element={
-                    <Error/>
-                }/>
-            </Routes>
+                        </>
+                    }/>
+                    <Route path='*' element={
+                        <Error/>
+                    }/>
+                </Routes>
+            </main>
         </BrowserRouter>
     );
 };

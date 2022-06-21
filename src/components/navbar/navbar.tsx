@@ -3,6 +3,10 @@ import {
     useRef,
     useEffect
 } from 'react';
+import {
+    useLocation,
+    useNavigate
+} from 'react-router-dom';
 
 import {
     NavbarContainer,
@@ -24,6 +28,8 @@ const navbarItems = [
 ];
 
 export default function Navbar() {
+    const location = useLocation();
+    const navigate = useNavigate()
     const [sections, setSections] = useState<NodeListOf<HTMLElement>>();
     const [currentNavigation, setCurrentNavigatioon] = useState('HomeSection');
     const scrollData = useScrollData();
@@ -46,11 +52,18 @@ export default function Navbar() {
         };
     });
 
+    const onNavClick = () => {
+        if(location.pathname !== '/') {
+            navigate('/', { replace: true });
+            window.location.reload();
+        };
+    };
+
     return (
         <NavbarContainer id='NavbarContainer' ref={ navbarRef }>
             <NavbarItems className='active'>
                 {navbarItems.map((elm, i) => (
-                    <NavbarItem key={ i } text={ elm.text } count={ 65 * i } to={ elm.path } smooth={ true } offset={ elm.ignoreOffset ? 0 : 65 } className={ `${i === 0 ? 'active first' : ''}${i === navbarItems.length - 1 ? 'last' : ''} ${elm.className}` }>
+                    <NavbarItem key={ i } text={ elm.text } count={ 65 * i } to={ elm.path } smooth={ true } offset={ elm.ignoreOffset ? 0 : 65 } className={ `${i === 0 ? 'active first' : ''}${i === navbarItems.length - 1 ? 'last' : ''} ${elm.className}` } onClick={ onNavClick }>
                         <i className={`bx ${elm.icon}`}/>
                     </NavbarItem>
                 ))}

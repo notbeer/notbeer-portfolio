@@ -46,12 +46,14 @@ export default function Experience() {
     return (
         <section id="ExperienceSection">
             <Category title='Experince' description='What am I experienced in?'/>
-            <FadeIn onView={ true } animateFrom={{ y: '300', opacity: '0' }} animateTo={{ y: '0', opacity: '1' }} delay={ 300 } className='cards'>
-                {card('Frontend Development', frontend, accent, secondAccent)}
-                {card('Backend Development', backend, secondAccent, accent)}
-                {card('Libraries & Frameworks', librariesNframeworks, large ? accent : secondAccent, large ? secondAccent : accent)}
-                {card('Software & Tools', softwareNtools, large ? secondAccent : accent, large ? accent : secondAccent)}
-            </FadeIn>
+            <div id="ContentMargin">
+                <FadeIn onView={ true } animateFrom={{ y: '300', opacity: '0' }} animateTo={{ y: '0', opacity: '1' }} delay={ 300 } className='cards'>
+                    {card('Frontend Development', frontend, accent, secondAccent)}
+                    {card('Backend Development', backend, secondAccent, accent)}
+                    {card('Libraries & Frameworks', librariesNframeworks, large ? accent : secondAccent, large ? secondAccent : accent)}
+                    {card('Software & Tools', softwareNtools, large ? secondAccent : accent, large ? accent : secondAccent)}
+                </FadeIn>
+            </div>
         </section>
     );
 };
