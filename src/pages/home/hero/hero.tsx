@@ -27,7 +27,7 @@ export default function Home() {
                             <br/>
                             I'm <ColorText>notbeer</ColorText>.
                         </h1>
-                        <p>I'm an developer located in Buffalo, New York. I specialize in algorithms, machine learning, the frontend and the backend of an website; with experience in multiple frameworks, and applications.</p>
+                        <p>Young ambitious programmer, always striving to learn new things to improve my skills on algorithms, machine learning, frontend/backend of websites and other applications!</p>
                         <Button2>
                             <Link to='FooterSection' smooth={ true }>CONTACT</Link>
                         </Button2>

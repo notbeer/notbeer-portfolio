@@ -19,7 +19,8 @@ const portfolio: Array<portfolioTypings> = [
         title: 'React Wordle Clone',
         category: 'reactjs',
         description: 'A simple wordle clone written in ReactJS.',
-        github: 'https://github.com/notbeer/react-wordle-clone'
+        github: 'https://github.com/notbeer/react-wordle-clone',
+        demo: '/react-wordle-clone'
     },
     {
         title: 'Gametest API Wrapper',

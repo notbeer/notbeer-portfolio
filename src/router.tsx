@@ -13,8 +13,10 @@ import About from "./pages/home/about/about";
 import Experience from "./pages/home/experience/experience";
 import Service from "./pages/home/service/service";
 import Portfolio from "./pages/home/portfolio/portfolio";
-import Testimonial from "./pages/home/testimonial/testimonial";
 import Footer from "./pages/home/footer/footer";
+
+import ReactWordleClone from "./assets/demo/react-wordle-clone/src";
+
 import Error from "./pages/error/error";
 
 export default function Router() {
@@ -32,19 +34,21 @@ export default function Router() {
                 pauseOnHover
             />
             <Theme/>
-            <Navbar/>
             <main id="App">
                 <Routes>
                     <Route path='/' element={
                         <>
+                            <Navbar/>
                             <Home/>
                             <About/>
                             <Experience/>
                             <Service/>
                             <Portfolio/>
-                            <Testimonial/>
                             <Footer/>
                         </>
+                    }/>
+                    <Route path='/react-wordle-clone' element={
+                        <ReactWordleClone/>
                     }/>
                     <Route path='*' element={
                         <Error/>

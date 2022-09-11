@@ -49,7 +49,7 @@ export default function About() {
                             ))}
                         </FadeIn>
                         <FadeIn onView={ true } animateFrom={{ x: '300', opacity: '0' }} animateTo={{ x: '0', opacity: '1' }} delay={ 300 } childTag='p' childClassName='interest-information'>
-                            I'm an developer located in Buffalo, New York. I specialize in algorithms, machine learning, the frontend and the backend of an website; with experience in multiple frameworks, and applications. I took an interest in coding/programming, since the beginning of 2020. Through out that time, I have dedicated myself over the past years to learn multiple languages, frameworks and much more!
+                            I'm a developer located in Buffalo, New York. I specialize in algorithms, machine learning, frontend/backend of websites, with experience in multiple frameworks and applications. I took an interest in programming, in the beginning of 2020. Since then I have dedicated myself to learning multiple languages, frameworks and much more!
                         </FadeIn>
                         <FadeIn onView={ true } animateFrom={{ x: '300', opacity: '0' }} animateTo={{ x: '0', opacity: '1' }} delay={ 200 } className='my-interests'>
                             <h3>My Interests</h3>

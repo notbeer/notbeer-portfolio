@@ -2,6 +2,7 @@
 
 section#FooterSection {
     font-size: 0.9rem;
+    background-color: var(--background-light);
     padding: 5rem 3rem 6rem 3rem;
     user-select: none;
     @include lg {

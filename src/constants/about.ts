@@ -22,7 +22,7 @@ const info: Array<infoTypings> = [
     {
         icon: 'bx-award',
         title: 'Experience',
-        description: '1+ Years'
+        description: '2+ Years'
     }
 ];
 const interests: Array<interestsTypings> = [
@@ -31,16 +31,16 @@ const interests: Array<interestsTypings> = [
         title: 'Music'
     },
     {
-        icon: 'bxs-movie-play',
-        title: 'Movies'
-    },
-    {
         icon: 'bxs-basketball',
         title: 'Basketball'
     },
     {
         icon: 'bxs-pizza',
         title: 'Foodie'
+    },
+    {
+        icon: 'bxs-trophy',
+        title: 'Games'
     }
 ];
 
