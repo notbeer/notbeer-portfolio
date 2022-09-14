@@ -1,6 +1,15 @@
 @import '../scss/global/fonts.scss';
 @import '../scss/global/variables.scss';
 
+*, ::after, ::before {
+    border:none;
+    outline:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+}
+
 html {
     -webkit-tap-highlight-color: transparent;
 }

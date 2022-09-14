@@ -4,27 +4,14 @@ import {
     useLayoutEffect,
 } from 'react';
 
+import { defaultAppConfig } from './constants/defaultAppConfig';
+
 import useReadLocalStorage from './hooks/useReadLocalStorage';
 
 import Router from './router';
 
 export default function App() {
-    const appConfig = useReadLocalStorage<any>('app-configuration') || {
-        theme: {
-            // name: window.matchMedia('(prefers-color-scheme: dark)')?.matches ? 'System (Dark)' : 'System (Light)',
-            // type: window.matchMedia('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light'
-            name: 'Light',
-            type: 'light'
-        },
-        accent: {
-            name: 'Purple',
-            color: 'var(--purple)'
-        },
-        'second-accent': {
-            name: 'Green',
-            color: 'var(--green)'
-        }
-    };
+    const appConfig = useReadLocalStorage<any>('app-configuration') || defaultAppConfig;
 
     useEffect(() => {
         window.history.scrollRestoration = 'manual';

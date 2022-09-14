@@ -1,6 +1,8 @@
 import './theme.scss';
 import { toast } from 'react-toastify';
 
+import { defaultAppConfig } from '../../constants/defaultAppConfig';
+
 import useToggle from '../../hooks/useToggle';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
@@ -12,28 +14,12 @@ const themeColors = [
     { name: "Purple", variable: "--purple" },
     { name: "Yellow", variable: "--yellow" },
     { name: "Orange", variable: "--orange" },
-    { name: "Red", variable: "--red" },
     { name: "Pink", variable: "--pink" }
 ];
 
 export default function Theme() {
     const [open, setOpen] = useToggle(false);
-    const [appConfig, setAppConfig] = useLocalStorage('app-configuration', {
-        theme: {
-            // name: window.matchMedia('(prefers-color-scheme: dark)')?.matches ? 'System (Dark)' : 'System (Light)',
-            // type: window.matchMedia('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light'
-            name: 'Light',
-            type: 'light'
-        },
-        accent: {
-            name: 'Purple',
-            color: 'var(--purple)'
-        },
-        'second-accent': {
-            name: 'Green',
-            color: 'var(--green)'
-        }
-    });
+    const [appConfig, setAppConfig] = useLocalStorage('app-configuration', defaultAppConfig);
     const themeIcons = [
         {
             name: "System theme",
@@ -57,7 +43,7 @@ export default function Theme() {
 
     const switchTheme = (theme: string, themeName: string) => {
         if(themeName === appConfig.theme.name) return;
-        return toast.error('Background themes are temporarily disabled.', {
+        toast.error('Background themes are temporarily disabled.', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -66,6 +52,7 @@ export default function Theme() {
             draggable: true,
             progress: undefined
         });
+        /*
         setAppConfig({
             theme: {
                 name: themeName,
@@ -74,6 +61,7 @@ export default function Theme() {
             accent: appConfig.accent,
             'second-accent': appConfig['second-accent']
         });
+        */
     };
 
     const switchAccent = (color: string, colorName: string) => {

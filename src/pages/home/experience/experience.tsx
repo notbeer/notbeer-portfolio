@@ -35,7 +35,7 @@ export default function Experience() {
                         <i className='bx bxs-badge-check' style={{ color: iconColor }}/>
                         <div>
                             <h4>{elm.content}</h4>
-                            <small>{elm.skill}</small>
+                            {/* <small>{elm.skill}</small> */}
                         </div>
                     </div>
                 ))}

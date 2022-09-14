@@ -23,7 +23,7 @@ export default function Footer() {
         const formData = new FormData(event.currentTarget);
 
         const webhookRequest = new XMLHttpRequest();
-        webhookRequest.open("POST", process.env.REACT_APP_DISCORD_WEBHOOK!);
+        webhookRequest.open("POST", process.env.REACT_APP_DISCORD_WEBHOOK! ?? process.env.NODE_ENV_DISCORD_WEBHOOK!);
         webhookRequest.setRequestHeader('Content-type', 'application/json');
         
         const fields: Array<embedField> = [];
@@ -84,7 +84,8 @@ export default function Footer() {
                         closeOnClick: true,
                         pauseOnHover: true,
                         draggable: true,
-                        progress: undefined
+                        progress: undefined,
+                        onClick: () => (formInputRef.current as unknown as HTMLInputElement).focus()
                     });
                 }}>
                     <div className="footer-information">

@@ -38,12 +38,14 @@ export default function Router() {
                 <Routes>
                     <Route path='/' element={
                         <>
-                            <Navbar/>
-                            <Home/>
-                            <About/>
-                            <Experience/>
-                            <Service/>
-                            <Portfolio/>
+                            <section className="content">
+                                <Navbar/>
+                                <Home/>
+                                <About/>
+                                <Experience/>
+                                <Service/>
+                                <Portfolio/>
+                            </section>
                             <Footer/>
                         </>
                     }/>
