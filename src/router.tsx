@@ -15,8 +15,6 @@ import Service from "./pages/home/service/service";
 import Portfolio from "./pages/home/portfolio/portfolio";
 import Footer from "./pages/home/footer/footer";
 
-import ReactWordleClone from "./assets/demo/react-wordle-clone/src/index";
-
 import Error from "./pages/error/error";
 
 export default function Router() {
@@ -48,9 +46,6 @@ export default function Router() {
                             </section>
                             <Footer/>
                         </>
-                    }/>
-                    <Route path='/react-wordle-clone' element={
-                        <ReactWordleClone/>
                     }/>
                     <Route path='*' element={
                         <Error/>

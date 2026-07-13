@@ -20,7 +20,7 @@ const portfolio: Array<portfolioTypings> = [
         category: 'reactjs',
         description: 'A simple wordle clone written in ReactJS.',
         github: 'https://github.com/notbeer/react-wordle-clone',
-        demo: '/react-wordle-clone'
+        demo: 'https://react-wordle-abir.netlify.app'
     },
     {
         title: 'Gametest API Wrapper',
