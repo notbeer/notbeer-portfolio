@@ -40,7 +40,7 @@ export default function Footer() {
                 {
                     "color": Math.floor(Math.random() * 16777215),
                     "title": "Contact Information",
-                    "description": "Hey, notbeer! Someone has contacted you through your portfolio website.",
+                    "description": "Hey, Abir! Someone has contacted you through your portfolio website.",
                     fields
                 }
             ]
@@ -51,7 +51,7 @@ export default function Footer() {
         webhookRequest.onreadystatechange = () => {
             if(webhookRequest.readyState === 4) {
                 webhookRequest.status !== 204
-                ? toast.error('An error occured while trying to message notbeer...', {
+                ? toast.error('An error occured while trying to message Abir...', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -60,7 +60,7 @@ export default function Footer() {
                     draggable: true,
                     progress: undefined
                 })
-                : toast.success('Successfully sent message to notbeer!', {
+                : toast.success('Successfully sent message to Abir!', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -89,7 +89,7 @@ export default function Footer() {
                     });
                 }}>
                     <div className="footer-information">
-                        <Link to='root' smooth={ true } className='logo'>NOTBEER</Link>
+                        <Link to='root' smooth={ true } className='logo'>ABIR</Link>
                         <div className='description'>“<br/>Experience is<br/>based on mistakes.<br/>”</div>
                     </div>
                     <div><div className="svg-1"><Hoc onView={ true } delay={ 400 } rotateTo='left'/></div></div>
@@ -115,12 +115,12 @@ export default function Footer() {
                         <li className='footer-socials'>
                             <a href="https://github.com/notbeer" target='_blank'><i className='bx bxl-github'/></a>
                             <a href="#" target='_blank'><i className='bx bxl-instagram'/></a>
-                            <a href="https://twitter.com/notbeer1" target='_blank'><i className='bx bxl-twitter'/></a>
+                            <a href="#" target='_blank'><i className='bx bxl-twitter'/></a>
                         </li>
                     </FadeIn>
                     <div className="footer-contact">
                         <div className="title">
-                            Contact notbeer<br/>through the website
+                            Contact Abir<br/>through the website
                         </div>
                         <form ref={ formRef } onSubmit={ onContactSubmit }>
                             <div className="input-box">
@@ -147,7 +147,7 @@ export default function Footer() {
                 </FadeIn>
                 <FadeIn onView={ true } animateFrom={{ y: '-80', opacity: '0' }} animateTo={{ y: '0', opacity: '1' }} delay={ 1100 }>
                     <div className="footer-copyright">
-                        © 2021 - {new Date().getFullYear()} notbeer.dev - All Rights Reserved.
+                        © 2021 - {new Date().getFullYear()} abircodes.dev - All Rights Reserved.
                     </div>
                 </FadeIn>
             </div>

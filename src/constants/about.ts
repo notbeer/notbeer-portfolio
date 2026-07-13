@@ -12,7 +12,7 @@ const info: Array<infoTypings> = [
     {
         icon: 'bxs-user',
         title: 'Clients',
-        description: '7+ people'
+        description: '13+ individuals'
     },
     {
         icon: 'bxs-folder-open',
@@ -22,7 +22,7 @@ const info: Array<infoTypings> = [
     {
         icon: 'bx-award',
         title: 'Experience',
-        description: '2+ Years'
+        description: '5+ Years'
     }
 ];
 const interests: Array<interestsTypings> = [
@@ -31,16 +31,12 @@ const interests: Array<interestsTypings> = [
         title: 'Music'
     },
     {
-        icon: 'bxs-basketball',
-        title: 'Basketball'
+        icon: 'bx-football',
+        title: 'Soccer'
     },
     {
         icon: 'bxs-pizza',
         title: 'Foodie'
-    },
-    {
-        icon: 'bxs-trophy',
-        title: 'Games'
     }
 ];
 

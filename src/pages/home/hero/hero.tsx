@@ -25,7 +25,7 @@ export default function Home() {
                         <h1>
                             Hello,
                             <br/>
-                            I'm <ColorText>notbeer</ColorText>.
+                            I'm <ColorText>Abir</ColorText>.
                         </h1>
                         <p>Young ambitious programmer, always striving to learn new things to improve my skills on algorithms, machine learning, frontend/backend of websites and other applications!</p>
                         <Button2>

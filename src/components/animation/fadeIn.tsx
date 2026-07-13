@@ -3,6 +3,8 @@ import React, {
     useRef,
     useEffect,
     useState,
+    ReactElement,
+    CSSProperties
 } from "react";
 
 import useInView from "../../hooks/useInView";
@@ -82,7 +84,7 @@ export default function FadeIn(props: PropsWithChildren<FadeInProps>) {
                     {child}
                 </ChildTag>
                 : React.isValidElement(child)
-                    ? React.cloneElement(child, {
+                    ? React.cloneElement(child as ReactElement<{ style?: CSSProperties }>, {
                         style: {
                             ...(elementVisible > i && (props.onView ? wrapperInView : true) ? { ...styleTo } : { ...styleFrom }),
                             transition: `opacity ${transitionDuration}ms, transform ${transitionDuration}ms${props.transitionFunction ? ` ${props.transitionFunction}` : ''}`,

@@ -1,3 +1,4 @@
+// Mainly for github users. If they want to add testimonials
 import './testimonial.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';

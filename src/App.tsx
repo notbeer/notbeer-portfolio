@@ -14,6 +14,7 @@ export default function App() {
     const appConfig = useReadLocalStorage<any>('app-configuration') || defaultAppConfig;
 
     useEffect(() => {
+        console.log(appConfig)
         window.history.scrollRestoration = 'manual';
     }, []);
 

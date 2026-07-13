@@ -11,6 +11,16 @@
 
     --accent: #8b5cf6;
     --second-accent: #10b981;
+
+    
+    --background: #edf2f8;
+    --background-light: #fff;
+
+    --border-color: rgb(150, 150, 150);
+        
+    --font: #1f1f1f;
+    --font-pale: #777;
+    --dark-font-pale: rgb(211, 211, 211);
     
     &[app-theme="light"] {
         --background: #edf2f8;
